@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SimpleCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc8-Vp-hWG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8b-Ze-SEh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="マイナス">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="minusOne:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A8s-Xu-1Ke"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-UG-0CH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="プラス">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="plusOne:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VyR-sr-SSJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVf-QQ-dqT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="リセット">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eem-KN-qRc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Nc8-Vp-hWG" secondAttribute="centerX" id="9Qr-a3-xSv"/>
+                            <constraint firstItem="Nc8-Vp-hWG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="47" id="Bm7-7m-0B9"/>
+                            <constraint firstItem="Nc8-Vp-hWG" firstAttribute="centerX" secondItem="X8b-Ze-SEh" secondAttribute="centerX" id="CEv-FL-5tX"/>
+                            <constraint firstItem="fVf-QQ-dqT" firstAttribute="top" secondItem="X8b-Ze-SEh" secondAttribute="bottom" constant="54" id="Vtp-ZP-WlX"/>
+                            <constraint firstItem="fqa-UG-0CH" firstAttribute="top" secondItem="Nc8-Vp-hWG" secondAttribute="bottom" constant="127" id="Yaq-WD-VBQ"/>
+                            <constraint firstItem="fqa-UG-0CH" firstAttribute="centerX" secondItem="Nc8-Vp-hWG" secondAttribute="centerX" constant="0.5" id="beP-ZC-mIp"/>
+                            <constraint firstItem="Nc8-Vp-hWG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="84" id="pQX-LS-A3X"/>
+                            <constraint firstItem="X8b-Ze-SEh" firstAttribute="top" secondItem="fqa-UG-0CH" secondAttribute="bottom" constant="54" id="r3b-pM-pdE"/>
+                            <constraint firstItem="fVf-QQ-dqT" firstAttribute="centerX" secondItem="Nc8-Vp-hWG" secondAttribute="centerX" id="uFo-qF-Bw2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Nc8-Vp-hWG"/>
+                                <exclude reference="X8b-Ze-SEh"/>
+                                <exclude reference="fqa-UG-0CH"/>
+                                <exclude reference="fVf-QQ-dqT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9Qr-a3-xSv"/>
+                                <exclude reference="Bm7-7m-0B9"/>
+                                <exclude reference="CEv-FL-5tX"/>
+                                <exclude reference="pQX-LS-A3X"/>
+                                <exclude reference="r3b-pM-pdE"/>
+                                <exclude reference="Vtp-ZP-WlX"/>
+                                <exclude reference="uFo-qF-Bw2"/>
+                                <exclude reference="Yaq-WD-VBQ"/>
+                                <exclude reference="beP-ZC-mIp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Nc8-Vp-hWG"/>
+                                <include reference="X8b-Ze-SEh"/>
+                                <include reference="fqa-UG-0CH"/>
+                                <include reference="fVf-QQ-dqT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9Qr-a3-xSv"/>
+                                <exclude reference="Bm7-7m-0B9"/>
+                                <include reference="CEv-FL-5tX"/>
+                                <include reference="pQX-LS-A3X"/>
+                                <include reference="r3b-pM-pdE"/>
+                                <include reference="Vtp-ZP-WlX"/>
+                                <include reference="uFo-qF-Bw2"/>
+                                <include reference="Yaq-WD-VBQ"/>
+                                <include reference="beP-ZC-mIp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="counter" destination="Nc8-Vp-hWG" id="HYA-ev-MUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="401"/>
+        </scene>
+    </scenes>
+</document>
